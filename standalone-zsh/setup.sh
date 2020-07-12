@@ -9,8 +9,8 @@ cp zle.so $STANDALONE_ZSH_PATH
 cp zsh $STANDALONE_ZSH_PATH
 tar xvf ohmyzsh.tar.gz
 cp -r .oh-my-zsh ~
-mkdir ~/.terminfo
-cp xterm-256color ~/.terminfo/
+mkdir ~/.terminfo/x
+cp xterm-256color ~/.terminfo/x/
 echo alias zsh=~/.standalone/zsh/standalone-zsh.sh >> ~/.aliases
 cat <<EOT > ~/.zshrc
 export TERM="xterm-256color"
