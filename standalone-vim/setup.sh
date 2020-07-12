@@ -1,4 +1,5 @@
 #!/bin/bash
+set -xe
 STANDALONE_VIM_PATH=~/.standalone/vim
 mkdir $STANDALONE_VIM_PATH -p
 cp standalone-vim.sh $STANDALONE_VIM_PATH

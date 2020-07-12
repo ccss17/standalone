@@ -1,4 +1,5 @@
 #!/bin/bash
+set -xe
 STANDALONE_TMUX_PATH=~/.standalone/tmux
 mkdir $STANDALONE_TMUX_PATH -p
 cp standalone-tmux.sh $STANDALONE_TMUX_PATH
