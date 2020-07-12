@@ -4,6 +4,8 @@ STANDALONE_ZSH_PATH=~/.standalone/zsh
 mkdir $STANDALONE_ZSH_PATH -p
 cp standalone-zsh.sh $STANDALONE_ZSH_PATH
 cp libncursesw.so.6 $STANDALONE_ZSH_PATH
+cp libm.so.6 $STANDALONE_ZSH_PATH
+cp zle.so $STANDALONE_ZSH_PATH
 cp zsh $STANDALONE_ZSH_PATH
 echo alias zsh=~/.standalone/zsh/standalone-zsh.sh >> ~/.aliases
 cat <<EOT > ~/.zshrc
