@@ -5,16 +5,16 @@ cp standalone-vim.sh $STANDALONE_VIM_PATH
 cp libgpm.so.2 $STANDALONE_VIM_PATH
 cp libpython3.5m.so.1.0 $STANDALONE_VIM_PATH
 cp vim $STANDALONE_VIM_PATH
-tar xvf vim74.tar.gz
-cp -r vim74 $STANDALONE_VIM_PATH
+tar xvf vim82.tar.gz
+cp -r vim82 $STANDALONE_VIM_PATH
 echo alias vi=~/.standalone/vim/standalone-vim.sh >> ~/.bashrc
 
 curl -fLo ~/.vim/colors/monokai_pro.vim --create-dirs https://raw.githubusercontent.com/phanviet/vim-monokai-pro/master/colors/monokai_pro.vim
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cat <<EOT > ~/.vimrc
-let \$VIM         = \$HOME . "/.standalone/vim/vim74" 
-let \$VIMRUNTIME  = \$HOME . "/.standalone/vim/vim74"
+let \$VIM         = \$HOME . "/.standalone/vim/vim82" 
+let \$VIMRUNTIME  = \$HOME . "/.standalone/vim/vim82"
 set runtimepath^=\$VIMRUNTIME
 set helpfile=\$VIMRUNTIME/doc/help.txt
 syntax on
