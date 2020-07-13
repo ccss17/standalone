@@ -1,6 +1,6 @@
-cd standalone-tmux
+cd tmux
 ./setup.sh
-cd ../standalone-vim
+cd ../vim
 ./setup.sh
-cd ../standalone-zsh
+cd ../zsh
 ./setup.sh
