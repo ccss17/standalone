@@ -8,7 +8,7 @@ cp libpython3.5m.so.1.0 $STANDALONE_VIM_PATH
 cp vim $STANDALONE_VIM_PATH
 tar xvf vim82.tar.gz
 cp -r vim82 $STANDALONE_VIM_PATH
-echo alias vi=~/.standalone/vim/standalone-vim.sh >> ~/.bashrc
+echo alias vi=~/.standalone/vim/standalone-vim.sh >> ~/.aliases
 
 if [[ ! -f ~/.vim/autoload/onedark.vim ]]; then
     ~/.standalone/curl/standalone-curl.sh -sfLo ~/.vim/autoload/onedark.vim --create-dirs https://raw.githubusercontent.com/joshdick/onedark.vim/master/autoload/onedark.vim

@@ -4,4 +4,4 @@ STANDALONE_LSD_PATH=~/.standalone/lsd
 mkdir $STANDALONE_LSD_PATH -p
 cp standalone-lsd.sh $STANDALONE_LSD_PATH
 cp lsd $STANDALONE_LSD_PATH
-echo alias lsd=~/.standalone/lsd/standalone-lsd.sh >> ~/.bashrc
+echo alias lsd=~/.standalone/lsd/standalone-lsd.sh >> ~/.aliases

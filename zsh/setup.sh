@@ -28,3 +28,6 @@ source ~/.oh-my-zsh/oh-my-zsh.sh
 stty -ixon
 source ~/.aliases
 EOT
+cat <<EOT > ~/.zshenv
+MODULE_PATH=~/.standalone
+EOT
