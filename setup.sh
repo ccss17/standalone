@@ -1,6 +1,6 @@
 cd zsh
 ./setup.sh
-cd bat
+cd ../bat
 ./setup.sh
 cd ../curl
 ./setup.sh
