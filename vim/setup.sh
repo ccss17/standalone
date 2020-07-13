@@ -10,7 +10,8 @@ tar xvf vim82.tar.gz
 cp -r vim82 $STANDALONE_VIM_PATH
 echo alias vi=~/.standalone/vim/standalone-vim.sh >> ~/.bashrc
 
-curl -fLo ~/.vim/colors/monokai_pro.vim --create-dirs https://raw.githubusercontent.com/phanviet/vim-monokai-pro/master/colors/monokai_pro.vim
+~/.standalone/curl/standalone-curl.sh -sfLo ~/.vim/autoload/onedark.vim --create-dirs https://raw.githubusercontent.com/joshdick/onedark.vim/master/autoload/onedark.vim
+~/.standalone/curl/standalone-curl.sh -sfLo ~/.vim/colors/onedark.vim --create-dirs https://raw.githubusercontent.com/joshdick/onedark.vim/master/colors/onedark.vim
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cat <<EOT > ~/.vimrc
@@ -19,7 +20,7 @@ let \$VIMRUNTIME  = \$HOME . "/.standalone/vim/vim82"
 set runtimepath^=\$VIMRUNTIME
 set helpfile=\$VIMRUNTIME/doc/help.txt
 syntax on
-color monokai_pro
+color onedark
 set switchbuf=usetab
 set encoding=utf-8
 set hlsearch
