@@ -5,6 +5,7 @@ mkdir $STANDALONE_ZSH_PATH -p
 cp zsh $STANDALONE_ZSH_PATH
 cp zsh-bin $STANDALONE_ZSH_PATH
 cp lib $STANDALONE_ZSH_PATH -r
+cp functions $STANDALONE_ZSH_PATH -r
 cp libncursesw.so.6 $STANDALONE_ZSH_PATH
 cp libm.so.6 $STANDALONE_ZSH_PATH
 tar xvf ohmyzsh.tar.gz
@@ -13,18 +14,17 @@ if [[ ! -d ~/.oh-my-zsh ]]; then
 fi
 mkdir ~/.terminfo/x -p
 cp xterm-256color ~/.terminfo/x/
-echo alias zsh=~/.standalone/zsh/standalone-zsh.sh >> ~/.aliases
 cat <<EOT > ~/.zshrc
 export TERM="xterm-256color"
 export ZSH="~/.oh-my-zsh"
-export INTERFACES="wlp0s20f0u11"
+export FPATH=\$FPATH:~/.standalone/zsh/functions
 #ZSH_THEME="alien-minimal/alien-minimal"
 ZSH_THEME="3den"
 plugins=(
   z
   zsh-autosuggestions
 )
-source ~/.oh-my-zsh/oh-my-zsh.sh
+#source ~/.oh-my-zsh/oh-my-zsh.sh
 stty -ixon
 source ~/.aliases
 EOT
