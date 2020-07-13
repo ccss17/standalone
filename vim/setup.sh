@@ -16,7 +16,7 @@ fi
 if [[ ! -f ~/.vim/colors/onedark.vim ]]; then
     ~/.standalone/curl/standalone-curl.sh -sfLo ~/.vim/colors/onedark.vim --create-dirs https://raw.githubusercontent.com/joshdick/onedark.vim/master/colors/onedark.vim
 fi
-if [[ ! -f ~/.vim/bundle/Vundle.vim ]]; then
+if [[ ! -d ~/.vim/bundle/Vundle.vim ]]; then
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 cat <<EOT > ~/.vimrc

@@ -8,7 +8,9 @@ cp libm.so.6 $STANDALONE_ZSH_PATH
 cp zle.so $STANDALONE_ZSH_PATH
 cp zsh $STANDALONE_ZSH_PATH
 tar xvf ohmyzsh.tar.gz
-cp -r .oh-my-zsh ~
+if [[ ! -d ~/.oh-my-zsh ]]; then
+    cp -r .oh-my-zsh ~
+fi
 mkdir ~/.terminfo/x -p
 cp xterm-256color ~/.terminfo/x/
 echo alias zsh=~/.standalone/zsh/standalone-zsh.sh >> ~/.aliases
