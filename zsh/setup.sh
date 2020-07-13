@@ -6,6 +6,8 @@ cp standalone-zsh.sh $STANDALONE_ZSH_PATH
 cp libncursesw.so.6 $STANDALONE_ZSH_PATH
 cp libm.so.6 $STANDALONE_ZSH_PATH
 cp zle.so $STANDALONE_ZSH_PATH
+cp complete.so $STANDALONE_ZSH_PATH
+cp compctl.so $STANDALONE_ZSH_PATH
 cp zsh $STANDALONE_ZSH_PATH
 tar xvf ohmyzsh.tar.gz
 if [[ ! -d ~/.oh-my-zsh ]]; then
