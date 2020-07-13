@@ -15,10 +15,30 @@ if [[ ! -d ~/.oh-my-zsh ]]; then
 fi
 mkdir ~/.terminfo/x -p
 cp xterm-256color ~/.terminfo/x/
+cat <<EOT > ~/.zsh_aliases
+alias src="source ~/.zshrc"
+alias t=tmux
+alias v=vim
+alias rm=rm -i
+alias c=clear
+alias cs='cd ..'
+alias ls='lsd --icon never'
+alias cl='clear;ls'
+alias l='ls'
+alias la='ls -a'
+alias ll='ls -la'
+alias lt='ls --tree'
+alias g=git
+alias gdb='gdb -q'
+alias py=python
+alias py2=python2
+alias py3=python3
+alias q=exit
+EOT
 cat <<EOT > ~/.zshrc
 export TERM="xterm-256color"
 export ZSH="~/.oh-my-zsh"
-export FPATH="$FPATH:/home/ccsss/.oh-my-zsh/plugins/zsh-autosuggestions:/home/ccsss/.oh-my-zsh/plugins/z:/home/ccsss/.oh-my-zsh/functions:/home/ccsss/.oh-my-zsh/completions:/home/ccsss/.standalone/zsh/site-functions:/home/ccsss/.standalone/zsh/site-functions:/home/ccsss/.standalone/zsh/functions/Calendar:/home/ccsss/.standalone/zsh/functions/Chpwd:/home/ccsss/.standalone/zsh/functions/Completion:/home/ccsss/.standalone/zsh/functions/Completion/Base:/home/ccsss/.standalone/zsh/functions/Completion/Linux:/home/ccsss/.standalone/zsh/functions/Completion/Unix:/home/ccsss/.standalone/zsh/functions/Completion/X:/home/ccsss/.standalone/zsh/functions/Completion/Zsh:/home/ccsss/.standalone/zsh/functions/Exceptions:/home/ccsss/.standalone/zsh/functions/Math:/home/ccsss/.standalone/zsh/functions/MIME:/home/ccsss/.standalone/zsh/functions/Misc:/home/ccsss/.standalone/zsh/functions/Newuser:/home/ccsss/.standalone/zsh/functions/Prompts:/home/ccsss/.standalone/zsh/functions/TCP:/home/ccsss/.standalone/zsh/functions/VCS_Info:/home/ccsss/.standalone/zsh/functions/VCS_Info/Backends:/home/ccsss/.standalone/zsh/functions/Zftp:/home/ccsss/.standalone/zsh/functions/Zle"
+export FPATH="$FPATH:$HOME/.oh-my-zsh/plugins/zsh-autosuggestions:$HOME/.oh-my-zsh/plugins/z:$HOME/.oh-my-zsh/functions:$HOME/.oh-my-zsh/completions:$HOME/.standalone/zsh/site-functions:$HOME/.standalone/zsh/site-functions:$HOME/.standalone/zsh/functions/Calendar:$HOME/.standalone/zsh/functions/Chpwd:$HOME/.standalone/zsh/functions/Completion:$HOME/.standalone/zsh/functions/Completion/Base:$HOME/.standalone/zsh/functions/Completion/Linux:$HOME/.standalone/zsh/functions/Completion/Unix:$HOME/.standalone/zsh/functions/Completion/X:$HOME/.standalone/zsh/functions/Completion/Zsh:$HOME/.standalone/zsh/functions/Exceptions:$HOME/.standalone/zsh/functions/Math:$HOME/.standalone/zsh/functions/MIME:$HOME/.standalone/zsh/functions/Misc:$HOME/.standalone/zsh/functions/Newuser:$HOME/.standalone/zsh/functions/Prompts:$HOME/.standalone/zsh/functions/TCP:$HOME/.standalone/zsh/functions/VCS_Info:$HOME/.standalone/zsh/functions/VCS_Info/Backends:$HOME/.standalone/zsh/functions/Zftp:$HOME/.standalone/zsh/functions/Zle"
 export PATH=$PATH:~/.standalone/zsh
 #ZSH_THEME="alien-minimal/alien-minimal"
 ZSH_THEME="3den"

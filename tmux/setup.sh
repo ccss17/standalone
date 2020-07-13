@@ -5,7 +5,7 @@ mkdir $STANDALONE_TMUX_PATH -p
 cp standalone-tmux.sh $STANDALONE_TMUX_PATH
 cp libevent-2.0.so.5 $STANDALONE_TMUX_PATH
 cp tmux $STANDALONE_TMUX_PATH
-echo alias tmux=~/.standalone/tmux/standalone-tmux.sh >> ~/.aliases
+echo alias tmux=~/.standalone/tmux/standalone-tmux.sh >> ~/.zsh_aliases
 echo alias t=tmux >> ~/.bashrc
 cat <<EOT > ~/.tmux.conf
 set-window-option -q -g utf-8 on
