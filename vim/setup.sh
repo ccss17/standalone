@@ -10,10 +10,15 @@ tar xvf vim82.tar.gz
 cp -r vim82 $STANDALONE_VIM_PATH
 echo alias vi=~/.standalone/vim/standalone-vim.sh >> ~/.bashrc
 
-~/.standalone/curl/standalone-curl.sh -sfLo ~/.vim/autoload/onedark.vim --create-dirs https://raw.githubusercontent.com/joshdick/onedark.vim/master/autoload/onedark.vim
-~/.standalone/curl/standalone-curl.sh -sfLo ~/.vim/colors/onedark.vim --create-dirs https://raw.githubusercontent.com/joshdick/onedark.vim/master/colors/onedark.vim
-
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+if [[ ! -f ~/.vim/autoload/onedark.vim ]]; then
+    ~/.standalone/curl/standalone-curl.sh -sfLo ~/.vim/autoload/onedark.vim --create-dirs https://raw.githubusercontent.com/joshdick/onedark.vim/master/autoload/onedark.vim
+fi
+if [[ ! -f ~/.vim/colors/onedark.vim ]]; then
+    ~/.standalone/curl/standalone-curl.sh -sfLo ~/.vim/colors/onedark.vim --create-dirs https://raw.githubusercontent.com/joshdick/onedark.vim/master/colors/onedark.vim
+fi
+if [[ ! -f ~/.vim/bundle/Vundle.vim ]]; then
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
 cat <<EOT > ~/.vimrc
 let \$VIM         = \$HOME . "/.standalone/vim/vim82" 
 let \$VIMRUNTIME  = \$HOME . "/.standalone/vim/vim82"
