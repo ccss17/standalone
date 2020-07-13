@@ -9,10 +9,10 @@ cp functions $STANDALONE_ZSH_PATH -r
 cp site-functions $STANDALONE_ZSH_PATH -r
 cp libncursesw.so.6 $STANDALONE_ZSH_PATH
 cp libm.so.6 $STANDALONE_ZSH_PATH
-tar xvf ohmyzsh.tar.gz
-if [[ ! -d ~/.oh-my-zsh ]]; then
-    cp -r .oh-my-zsh ~
-fi
+#tar xvf ohmyzsh.tar.gz
+#if [[ ! -d ~/.oh-my-zsh ]]; then
+    #cp -r .oh-my-zsh ~
+#fi
 mkdir ~/.terminfo/x -p
 cp xterm-256color ~/.terminfo/x/
 cat <<EOT > ~/.zsh_aliases
@@ -43,12 +43,12 @@ export PATH=\$PATH:~/.standalone/zsh
 #ZSH_THEME="alien-minimal/alien-minimal"
 ZSH_THEME="3den"
 plugins=(
-  z
-  zsh-autosuggestions
+  #z
+  #zsh-autosuggestions
 )
-source ~/.oh-my-zsh/oh-my-zsh.sh
+#source ~/.oh-my-zsh/oh-my-zsh.sh
 stty -ixon
-source ~/.aliases
+source ~/.zsh_aliases
 EOT
 cat <<EOT > ~/.zshenv
 MODULE_PATH=~/.standalone/zsh/lib
