@@ -45,8 +45,8 @@ export TERM="xterm-256color"
 export ZSH="\$HOME/.oh-my-zsh"
 export FPATH="\$HOME/.oh-my-zsh/plugins/zsh-autosuggestions:\$HOME/.oh-my-zsh/plugins/z:\$HOME/.oh-my-zsh/functions:\$HOME/.oh-my-zsh/completions:\$HOME/.standalone/zsh/site-functions:\$HOME/.standalone/zsh/site-functions:\$HOME/.standalone/zsh/functions/Calendar:\$HOME/.standalone/zsh/functions/Chpwd:\$HOME/.standalone/zsh/functions/Completion:\$HOME/.standalone/zsh/functions/Completion/Base:\$HOME/.standalone/zsh/functions/Completion/Linux:\$HOME/.standalone/zsh/functions/Completion/Unix:\$HOME/.standalone/zsh/functions/Completion/X:\$HOME/.standalone/zsh/functions/Completion/Zsh:\$HOME/.standalone/zsh/functions/Exceptions:\$HOME/.standalone/zsh/functions/Math:\$HOME/.standalone/zsh/functions/MIME:\$HOME/.standalone/zsh/functions/Misc:\$HOME/.standalone/zsh/functions/Newuser:\$HOME/.standalone/zsh/functions/Prompts:\$HOME/.standalone/zsh/functions/TCP:\$HOME/.standalone/zsh/functions/VCS_Info:\$HOME/.standalone/zsh/functions/VCS_Info/Backends:\$HOME/.standalone/zsh/functions/Zftp:\$HOME/.standalone/zsh/functions/Zle"
 export PATH=\$PATH:~/.standalone/zsh
-ZSH_THEME="alien-minimal/alien-minimal"
-#ZSH_THEME="3den"
+#ZSH_THEME="alien-minimal/alien-minimal"
+ZSH_THEME="3den"
 plugins=(
   z
   zsh-autosuggestions
