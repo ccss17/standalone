@@ -15,6 +15,7 @@ cat <<EOT > ~/.zsh_aliases
 alias src="source ~/.zshrc"
 alias t=tmux
 alias v=vim
+alias vi=vim
 alias rm=rm -i
 alias c=clear
 alias cs='cd ..'
@@ -54,4 +55,7 @@ plugins=(
 source ~/.oh-my-zsh/oh-my-zsh.sh
 stty -ixon
 source ~/.zsh_aliases
+export PATH=\$PATH:/usr/local/cuda/bin
+export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:/usr/local/cuda
 EOT
+echo "~/.standalone/zsh/zsh" >> ~/.bashrc
