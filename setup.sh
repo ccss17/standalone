@@ -14,3 +14,7 @@ cd ../tmux
 ./setup.sh
 cd ../vim
 ./setup.sh
+cd ../hyperfine
+./setup.sh
+cd ../nvtop
+./setup.sh
