@@ -18,3 +18,5 @@ cd ../hyperfine
 ./setup.sh
 cd ../nvtop
 ./setup.sh
+cd ../clang-format
+./setup.sh
